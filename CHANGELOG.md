@@ -1,6 +1,17 @@
 # Changelog
 
-## Unreleased
+## [2.0.0] - 2023-XX-XX
+- Prepare for Craft 4 compatibility
+- ...
+
+## [1.9.2] - 2022-03-26
+- Fix issues with Supertable / exclude SuperTableBlockElement
+
+## [1.9.1] - 2022-02-08
+- Add `softPurge` option in example config
+- Drop database table if exists (might happen with a dirty uninstall)
+
+## [1.9.0] - 2021-10-15
 - Add `softPurge` option to enable [Soft Purge](https://docs.fastly.com/en/guides/soft-purges) for Fastly.
 
 ## [1.8.0] - 2021-02-08

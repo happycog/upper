@@ -57,6 +57,13 @@ class Settings extends Model
      */
     public $keyPrefix = '';
 
+    /**
+     * Max kilobytes of the X-Cachetag header
+     *
+     * @var int
+     */
+    public $maxBytesForCacheTagHeader = null;
+
     // Public Methods
     // =========================================================================
 
@@ -70,7 +77,7 @@ class Settings extends Model
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             [['driver', 'drivers','keyPrefix'], 'required'],
@@ -115,7 +122,7 @@ class Settings extends Model
      */
     public function getNoCacheElements()
     {
-        return ['craft\elements\User', 'craft\elements\MatrixBlock'];
+        return ['craft\elements\User', 'craft\elements\MatrixBlock', 'verbb\supertable\elements\SuperTableBlockElement'];
     }
 
     /**
